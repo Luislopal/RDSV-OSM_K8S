@@ -1,11 +1,11 @@
 # Importamos los paquetes VNF a OSM
 chmod 777 /home/upm/Desktop/rdsv-final/pck
 
-#echo "Instalamos lo paquetes necesarios: pycurl, prettytable y packaging"
+echo "Instalamos lo paquetes necesarios: pycurl, prettytable y packaging"
 
-#pip install pycurl
-#pip install prettytable
-#pip install packaging
+pip install pycurl
+pip install prettytable
+pip install packaging
 
 #echo "Creación imagen docker de KNF:access"
 #cd /home/upm/Desktop/rdsv-final/img/vnf-img
