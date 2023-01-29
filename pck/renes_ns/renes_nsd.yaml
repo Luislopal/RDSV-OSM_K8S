@@ -2,7 +2,7 @@ nsd:
   nsd:
   - id: renes
     name: renes
-    designer: luichu
+    designer: Luislopal
     description: Residential Network Service NS consisting of 2 KNFs
     version: '1.0'
     df:
