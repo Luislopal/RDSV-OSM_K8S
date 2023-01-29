@@ -11,7 +11,7 @@ vnfd:
     - id: mgmtnet
   kdu:
   - name: repos
-    helm-chart: Luislopal/cpechart
+    helm-chart: repo-rdsv/cpechart
   mgmt-cp: mgmt-ext
   product-name: cpeknf
   provider: GUI
