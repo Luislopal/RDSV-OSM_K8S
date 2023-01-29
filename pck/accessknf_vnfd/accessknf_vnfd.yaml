@@ -11,7 +11,7 @@ vnfd:
     - id: mgmtnet
   kdu:
   - name: repos
-    helm-chart: repo-rdsv/accesschart
+    helm-chart: helmchartrepo/accesschart
   mgmt-cp: mgmt-ext
   product-name: accessknf
   provider: GUI

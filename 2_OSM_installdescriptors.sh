@@ -14,7 +14,7 @@ chmod 777 /home/upm/Desktop/rdsv-final/pck
 
 
 # Registrar repositorio de helm
-osm repo-add --type helm-chart --description "Repositorio Helm" repo-rdsv https://Luislopal.github.io/repo-rdsv
+osm repo-add --type helm-chart --description "Repositorio Helm" helmchartrepo https://Luislopal.github.io/repo-rdsv
 
 # Importamos los paquetes VNF a OSM
 cd /home/upm/Desktop/rdsv-final/pck
@@ -29,8 +29,8 @@ sudo apt install python3-prettytable
 
 # osm vnfd-update --content /home/upm/Desktop/rdsv-final/pck/accessknf_vnfd.tar.gz accessknf_vnfd
 # osm vnfd-update --content /home/upm/Desktop/rdsv-final/pck/cpeknf_vnfd.tar.gz cpeknf_vnfd
-osm vnfd-create /home/upm/Desktop/rdsv-final/pck/accessknf_vnfd.tar.gz
-osm vnfd-create /home/upm/Desktop/rdsv-final/pck/cpeknf_vnfd.tar.gz
+osm nfpkg-create /home/upm/Desktop/rdsv-final/pck/accessknf_vnfd.tar.gz
+osm nfpkg-create /home/upm/Desktop/rdsv-final/pck/cpeknf_vnfd.tar.gz
 
 echo "Visualizamos los paquetes VNF subidos"
 osm vnfd-list
