@@ -29,15 +29,15 @@ sudo apt install python3-prettytable
 
 # osm vnfd-update --content /home/upm/Desktop/rdsv-final/pck/accessknf_vnfd.tar.gz accessknf_vnfd
 # osm vnfd-update --content /home/upm/Desktop/rdsv-final/pck/cpeknf_vnfd.tar.gz cpeknf_vnfd
-osm vnfd-create accessknf_vnfd.tar.gz
-osm vnfd-create cpeknf_vnfd.tar.gz
+osm vnfd-create /home/upm/Desktop/rdsv-final/pck/accessknf_vnfd.tar.gz
+osm vnfd-create /home/upm/Desktop/rdsv-final/pck/cpeknf_vnfd.tar.gz
 
 echo "Visualizamos los paquetes VNF subidos"
 osm vnfd-list
 
 # osm vnfd-update --content /home/upm/Desktop/rdsv-final/pck/renes_ns.tar.gz renes_ns
 # Importamos los paquetes NS a OSM
-osm nsd-create renes_ns.tar.gz
+osm nsd-create /home/upm/Desktop/rdsv-final/pck/renes_ns.tar.gz
 
 echo "Visualizamos el paquete NS importado"
 osm nsd-list
