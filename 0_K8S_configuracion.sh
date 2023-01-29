@@ -1,14 +1,20 @@
-# Acceder al directorio compartido de la práctica desde la maquina virtual
-cd /media/sf_Practica4/rdsv-final/repo-rdsv
+# Acceder al Escritorio
+cd /home/upm/Desktop
 
-# Clonar el proyecto en el escritorio de la máquina virtual
-sudo cp -r /media/sf_Practica4/rdsv-final /home/upm/Desktop/
+# Clonar el proyecto en el escritorio desde git
+git clone https://github.com/Luislopal/rdsv-final.git
 
 # Dar permisos
 sudo chmod 777 /home/upm/Desktop/rdsv-final
 
 # Acceder al directorio del escritorio
 cd /home/upm/Desktop/rdsv-final
+
+# Clonar el repositorio helm en el directorio de la práctica
+git clone https://github.com/Luislopal/repo-rdsv.git
+
+# Dar permisos
+sudo chmod 777 /home/upm/Desktop/rdsv-final/repo-rdsv
 
 # Configurar la interfaz eth1 en la máquina K8S
 ssh upm@192.168.56.11 "sudo ip link set dev eth1 mtu 1400"
