@@ -18,6 +18,10 @@ chmod 777 /home/upm/Desktop/rdsv-final/pck
 # Ver las imagenes docker creadas
 #docker images
 
+
+# Registrar repositorio de helm
+osm repo-add --type helm-chart --description "Repositorio Helm" repo-rdsv https://Luislopal.github.io/repo-rdsv
+
 # Importamos los paquetes VNF a OSM
 cd /home/upm/Desktop/rdsv-final/pck
 sudo osm vnfd-create accessknf_vnfd.tar.gz
