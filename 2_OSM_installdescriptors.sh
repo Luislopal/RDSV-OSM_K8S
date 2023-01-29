@@ -1,12 +1,6 @@
 # Importamos los paquetes VNF a OSM
 chmod 777 /home/upm/Desktop/rdsv-final/pck
 
-echo "Instalamos lo paquetes necesarios: pycurl, prettytable y packaging"
-
-pip install pycurl
-pip install prettytable
-pip install packaging
-
 #echo "Creación imagen docker de KNF:access"
 #cd /home/upm/Desktop/rdsv-final/img/vnf-img
 #sudo docker build -t vnf-img .
@@ -24,14 +18,26 @@ osm repo-add --type helm-chart --description "Repositorio Helm" repo-rdsv https:
 
 # Importamos los paquetes VNF a OSM
 cd /home/upm/Desktop/rdsv-final/pck
-sudo osm vnfd-create accessknf_vnfd.tar.gz
-sudo osm vnfd-create cpeknf_vnfd.tar.gz
+echo "Instalamos lo paquetes necesarios: pycurl, prettytable y packaging"
+
+#pip3 install pycurl
+#pip3 install prettytable
+#pip3 install packaging
+sudo apt install python3-pycurl
+sudo apt install python3-packaging
+sudo apt install python3-prettytable
+
+# osm vnfd-update --content /home/upm/Desktop/rdsv-final/pck/accessknf_vnfd.tar.gz accessknf_vnfd
+# osm vnfd-update --content /home/upm/Desktop/rdsv-final/pck/cpeknf_vnfd.tar.gz cpeknf_vnfd
+osm vnfd-create accessknf_vnfd.tar.gz
+osm vnfd-create cpeknf_vnfd.tar.gz
 
 echo "Visualizamos los paquetes VNF subidos"
 osm vnfd-list
 
+# osm vnfd-update --content /home/upm/Desktop/rdsv-final/pck/renes_ns.tar.gz renes_ns
 # Importamos los paquetes NS a OSM
-sudo osm nsd-create renes_ns.tar.gz
+osm nsd-create renes_ns.tar.gz
 
 echo "Visualizamos el paquete NS importado"
 osm nsd-list
