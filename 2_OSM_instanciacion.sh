@@ -2,9 +2,10 @@
 chmod 777 /home/upm/Desktop/rdsv-final/pck
 
 echo "Instalamos lo paquetes necesarios: pycurl, prettytable y packaging"
-pip3 install pycurl
-pip3 install prettytable
-pip3 install packaging
+
+pip install pycurl
+pip install prettytable
+pip install packaging
 
 
 cd /home/upm/Desktop/rdsv-final/pck
