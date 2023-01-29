@@ -37,7 +37,7 @@ osm vnfd-list
 
 # osm vnfd-update --content /home/upm/Desktop/rdsv-final/pck/renes_ns.tar.gz renes_ns
 # Importamos los paquetes NS a OSM
-osm nsd-create /home/upm/Desktop/rdsv-final/pck/renes_ns.tar.gz
+osm nspkg-create /home/upm/Desktop/rdsv-final/pck/renes_ns.tar.gz
 
 echo "Visualizamos el paquete NS importado"
 osm nsd-list
