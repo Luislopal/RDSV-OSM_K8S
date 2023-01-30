@@ -77,11 +77,9 @@ $ACC_EXEC ovs-vsctl add-port OFbridge vxlanint
 $ACC_EXEC ovs-vsctl set-controller OFbridge tcp:127.0.0.1:6633
 $ACC_EXEC ovs-vsctl set-manager ptcp:6632
 
-$ACC_EXEC rm -r /usr/lib/python3/dist-packages/ryu
-$ACC_EXEC cd /usr/lib/python3/dist-packages
-$ACC_EXEC git clone https://github.com/faucetsdn/ryu.git
-$ACC_EXEC sed '/OFPFlowMod(/,/)/s/)/, table_id=1)/' usr/lib/python3/dist-packages/ryu/ryu/app/simple_switch_13.py > usr/lib/python3/dist-packages/ryu/ryu/app/simple_switch_13.py
-$ACC_EXEC cd ryu; sudo python3 ./setup.py install
+$ACC_EXEC git clone https://github.com/faucetsdn/ryu.git /usr/lib/python3/dist-packages/ryu1
+$ACC_EXEC sed '/OFPFlowMod(/,/)/s/)/, table_id=1)/' usr/lib/python3/dist-packages/ryu1/ryu/app/simple_switch_13.py > usr/lib/python3/dist-packages/ryu1/ryu/app/simple_switch_13.py
+sudo python3 /usr/lib/python3/dist-packages/ryu1/setup.py install
 $ACC_EXEC ryu-manager ryu.app.rest_qos ryu.app.rest_conf_switch ryu.app.simple_switch_13
 
 ## 4. En VNF:cpe agregar un bridge y configurar IPs y rutas
