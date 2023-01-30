@@ -69,7 +69,7 @@ $ACC_EXEC ifconfig vxlanint up
 $ACC_EXEC ip route add $IPCPE/32 via $K8SGW
 
 $ACC_EXEC ovs-vsctl add-br OFbridge
-$ACC_EXEC ovs-vsctl set bridge OFbridge protocols=OpenFlow10,OpenFlow12,OpenFlow13
+$ACC_EXEC ovs-vsctl set bridge OFbridge protocols=OpenFlow13
 $ACC_EXEC ovs-vsctl set-fail-mode OFbridge secure
 $ACC_EXEC ovs-vsctl set bridge OFbridge other-config:datapath-id=0000000000000001
 $ACC_EXEC ovs-vsctl add-port OFbridge vxlanacc
@@ -77,8 +77,14 @@ $ACC_EXEC ovs-vsctl add-port OFbridge vxlanint
 $ACC_EXEC ovs-vsctl set-controller OFbridge tcp:127.0.0.1:6633
 $ACC_EXEC ovs-vsctl set-manager ptcp:6632
 
-$ACC_EXEC ryu-manager ryu.app.rest_qos ryu.app.rest_conf_switch /media/sf_PracticaFinal/rdsv-final/qos_simple_switch_13.py
-
+#echo "AHORA"
+$ACC_EXEC ls usr/lib/python3/dist-packages/ryu
+#$ACC_EXEC sed '/OFPFlowMod(/,/)/s/)/, table_id=1)/' usr/lib/python3/dist-packages/ryu/ryu/app/simple_switch_13.py > ryu/ryu/app/qos_simple_switch_13.py
+#$ACC_EXEC cd usr/lib/python3/dist-packages/ryu
+#$ACC_EXEC sudo python3 ./setup.py install
+#echo "O NUNCA"
+#$ACC_EXEC cd usr/lib/python3/dist-packages/ryu
+#$ACC_EXEC ryu-manager ryu.app.rest_qos ryu.app.rest_conf_switch ryu.app.qos_simple_switch_13
 
 ## 4. En VNF:cpe agregar un bridge y configurar IPs y rutas
 echo "## 4. En VNF:cpe agregar un bridge y configurar IPs y rutas"
