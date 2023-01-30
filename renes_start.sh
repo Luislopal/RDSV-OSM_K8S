@@ -77,7 +77,7 @@ $ACC_EXEC ovs-vsctl add-port OFbridge vxlanint
 $ACC_EXEC ovs-vsctl set-controller OFbridge tcp:127.0.0.1:6633
 $ACC_EXEC ovs-vsctl set-manager ptcp:6632
 
-$ACC_EXEC ryu-manager ryu.app.rest_qos ryu.app.rest_conf_switch /home/qos_simple_switch_13.py &
+$ACC_EXEC ryu-manager ryu.app.rest_qos ryu.app.rest_conf_switch /media/sf_PracticaFinal/rdsv-final/qos_simple_switch_13.py &
 
 
 ## 4. En VNF:cpe agregar un bridge y configurar IPs y rutas
@@ -109,4 +109,4 @@ $CPE_EXEC /usr/bin/vnx_config_nat brint net1
 
 ## 8. Configurar QoS
 echo "## 8. Configurar QoS"
-./media/sf_PracticaFinal/rdsv-final/5_OSM_QoS.sh
+./5_OSM_QoS.sh
