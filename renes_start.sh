@@ -77,9 +77,8 @@ $ACC_EXEC ovs-vsctl add-port OFbridge vxlanint
 $ACC_EXEC ovs-vsctl set-controller OFbridge tcp:127.0.0.1:6633
 $ACC_EXEC ovs-vsctl set-manager ptcp:6632
 
-$ACC_EXEC git clone https://github.com/faucetsdn/ryu.git /usr/lib/python3/dist-packages/ryu1
-$ACC_EXEC sed '/OFPFlowMod(/,/)/s/)/, table_id=1)/' usr/lib/python3/dist-packages/ryu1/ryu/app/simple_switch_13.py > usr/lib/python3/dist-packages/ryu1/ryu/app/simple_switch_13.py
-sudo python3 /usr/lib/python3/dist-packages/ryu1/setup.py install
+$ACC_EXEC sed '/OFPFlowMod(/,/)/s/)/, table_id=1)/' /usr/lib/python3/dist-packages/ryu/app/simple_switch_13.py > /usr/lib/python3/dist-packages/ryu/app/simple_switch_13.py
+sudo python3 /usr/lib/python3/dist-packages/ryu/setup.py install
 $ACC_EXEC ryu-manager ryu.app.rest_qos ryu.app.rest_conf_switch ryu.app.simple_switch_13
 
 ## 4. En VNF:cpe agregar un bridge y configurar IPs y rutas
@@ -103,11 +102,11 @@ sleep 10
 echo "## 6. En VNF:cpe activar NAT para dar salida a Internet"
 $CPE_EXEC /usr/bin/vnx_config_nat brint net1
 
-## 7. Activar en VNF:cpe arpwatch
-#echo "## 7. Activar en VNF:cpe arpwatch"
-#$CPE_EXEC sed -i 's/INTERFACES=.*/INTERFACES="net1"/' /etc/default/arpwatch
-#$CPE_EXEC /etc/init.d/arpwatch start
-#$CPE_EXEC arpwatch -i net1
+# 7. Activar en VNF:cpe arpwatch
+echo "## 7. Activar en VNF:cpe arpwatch"
+$CPE_EXEC sed -i 's/INTERFACES=.*/INTERFACES="net1"/' /etc/default/arpwatch
+$CPE_EXEC /etc/init.d/arpwatch start
+$CPE_EXEC arpwatch -i net1
 
 ## 8. Configurar QoS
 echo "## 8. Configurar QoS"
