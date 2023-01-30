@@ -79,7 +79,7 @@ $ACC_EXEC ovs-vsctl set-manager ptcp:6632
 
 #echo "AHORA"
 $ACC_EXEC ls usr/lib/python3/dist-packages/ryu
-#$ACC_EXEC sed '/OFPFlowMod(/,/)/s/)/, table_id=1)/' usr/lib/python3/dist-packages/ryu/ryu/app/simple_switch_13.py > ryu/ryu/app/qos_simple_switch_13.py
+#$ACC_EXEC sed '/OFPFlowMod(/,/)/s/)/, table_id=1)/' usr/lib/python3/dist-packages/ryu/ryu/app/simple_switch_13.py > usr/lib/python3/dist-packages/ryu/ryu/app/qos_simple_switch_13.py
 #$ACC_EXEC cd usr/lib/python3/dist-packages/ryu
 #$ACC_EXEC sudo python3 ./setup.py install
 #echo "O NUNCA"
