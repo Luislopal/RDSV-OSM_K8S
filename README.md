@@ -36,6 +36,10 @@
 ```
 ./3_OSM_clusterk8s.sh
 ```
+9. Máquina K8S: Ejecutar script 4
+```
+./4_K8S_iPerf.sh
+```
 
 ### Scripts adicionales:
 
