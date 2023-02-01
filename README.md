@@ -8,36 +8,32 @@ Autores: Luis López Álvarez´y Álvaro de Rojas Maraver
 
 <img width="1395" alt="Infraestructura" src="https://user-images.githubusercontent.com/105986456/216118337-e11710e1-2a81-46bf-8f75-eb3921a15caf.png">
 
+ * Usar las dos máquinas virtuales RDSV-OSM y RDSV-K8S en ordenador propio.
+ * Crear una carpeta compartida en el host y en las dos máquinas virtuales RDSV-OSM, llamar a la carpeta "PracticaFinal". Este paso se recomienda realizarlo desde VirtualBox, seleccionar "configuración" -> "Carpetas compartidas", realizar este paso con las máquinas OSM y K8S.
+
 ### Pasos para el arranque:
 1. Máquina OSM > Ejecutar script 0
 ```
 ./0_OSM_configuracion.sh
 ```
-2. Máquina OSM: Ejecutar script 0.5
-```
-./0.5_permisos.sh
-```
-3. Máquina K8S: Ejecutar script 0
+2. Máquina K8S: Ejecutar script 0
 ```
 ./0_K8S_configuracion_on.sh
 ```
-4. Máquina K8S: Ejecutar script 0.5
 ```
-./0.5_permisos.sh
-```
-5. Máquina OSM: Ejecutar script 1 
+3. Máquina OSM: Ejecutar script 1 
 ```
 ./1_OSM_installdescriptors.sh
 ```
-6. Máquina OSM: Ejecutar script 2
+4. Máquina OSM: Ejecutar script 2
 ```
 ./2_OSM_instanciacion.sh
 ```
-8. Máquina OSM: Ejecutar script 3 
+5. Máquina OSM: Ejecutar script 3 
 ```
 ./3_OSM_clusterk8s.sh
 ```
-9. Máquina K8S: Ejecutar script 4
+6. Máquina K8S: Ejecutar script 4
 ```
 ./4_K8S_iPerf.sh
 ```
