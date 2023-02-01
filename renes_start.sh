@@ -76,7 +76,7 @@ $ACC_EXEC ovs-vsctl add-port OFbridge vxlanacc
 $ACC_EXEC ovs-vsctl add-port OFbridge vxlanint
 $ACC_EXEC ovs-vsctl set-controller OFbridge tcp:127.0.0.1:6633
 $ACC_EXEC ovs-vsctl set-manager ptcp:6632
-$ACC_EXEC ryu-manager ryu.app.rest_qos ryu.app.rest_conf_switch ryu.app.simple_switch_13 &
+$ACC_EXEC ryu-manager ryu.app.rest_qos ryu.app.rest_conf_switch /home/ryu.app.simple_switch_13 &
 
 ## 4. En VNF:cpe agregar un bridge y configurar IPs y rutas
 echo "## 4. En VNF:cpe agregar un bridge y configurar IPs y rutas"
