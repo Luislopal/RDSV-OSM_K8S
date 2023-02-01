@@ -9,7 +9,8 @@ Autores: Luis López Álvarez y Álvaro de Rojas Maraver
 <img width="1395" alt="Infraestructura" src="https://user-images.githubusercontent.com/105986456/216118337-e11710e1-2a81-46bf-8f75-eb3921a15caf.png">
 
 ### Instrucciones:
- * Usar las dos máquinas virtuales RDSV-OSM y RDSV-K8S en ordenador propio. Disponibles en http://idefix.dit.upm.es/download/vnx/vnx-vm/RDSV2022-v1.ova
+ * Usar las dos máquinas virtuales RDSV-OSM y RDSV-K8S en ordenador propio. 
+ * * Disponible en http://idefix.dit.upm.es/download/vnx/vnx-vm/RDSV2022-v1.ova
  * Crear una carpeta compartida en el host y en las dos máquinas virtuales RDSV-OSM, llamar a la carpeta "PracticaFinal". Este paso se recomienda realizarlo desde VirtualBox, seleccionar "configuración" -> "Carpetas compartidas", realizar este paso con las máquinas RDSV-OSM y RDSV-K8S.
  * Clonar el repositorio en la carpeta compartida:
 ```
