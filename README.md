@@ -4,15 +4,15 @@
 <br/><br/><br/>
 
 # Práctica final de RDSV
-Autores: Luis López Álvarez´y Álvaro de Rojas Maraver
+Autores: Luis López Álvarez y Álvaro de Rojas Maraver
 
 <img width="1395" alt="Infraestructura" src="https://user-images.githubusercontent.com/105986456/216118337-e11710e1-2a81-46bf-8f75-eb3921a15caf.png">
 
  * Usar las dos máquinas virtuales RDSV-OSM y RDSV-K8S en ordenador propio.
  * Crear una carpeta compartida en el host y en las dos máquinas virtuales RDSV-OSM, llamar a la carpeta "PracticaFinal". Este paso se recomienda realizarlo desde VirtualBox, seleccionar "configuración" -> "Carpetas compartidas", realizar este paso con las máquinas OSM y K8S.
 
-### Pasos para el arranque:
-1. Máquina OSM > Ejecutar script 0
+### Pasos para el despliegues:
+1. Máquina OSM: Ejecutar script 0
 ```
 ./0_OSM_configuracion.sh
 ```
