@@ -1,6 +1,8 @@
 # rdsv-final
 Práctica final de RDSV
 
+<img width="1395" alt="Infraestructura" src="https://user-images.githubusercontent.com/105986456/216112232-64c50ef3-e438-4d0f-9b83-c225ea55c32e.png">
+
 
 Pasos para el arranque:
 
