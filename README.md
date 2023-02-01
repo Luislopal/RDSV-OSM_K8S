@@ -48,7 +48,7 @@ Todos los comandos se ejecutarán desde el directorio clonado de la carpeta comp
 
 ### Scripts adicionales:
 
-Para apagar ejecutar script 0 en K8S
+Para apagar ejecutar script 0 en OSM
 ```
 ./0_OSM_configuracion_off.sh
 ```
