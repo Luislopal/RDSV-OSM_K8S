@@ -20,6 +20,7 @@ git clone https://github.com/Luislopal/rdsv-final.git
 ```
 
 ### Pasos para el despliegue:
+Todos los comandos se ejecutarán desde el directorio clonado de la carpeta compartida.
 1. Máquina OSM: Ejecutar script 0
 ```
 ./0_OSM_configuracion.sh
