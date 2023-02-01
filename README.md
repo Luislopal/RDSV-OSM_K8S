@@ -1,9 +1,14 @@
 # rdsv-final
 Práctica final de RDSV
 
-Pasos para el arranque:
+<img width="1395" alt="Infraestructura" src="https://user-images.githubusercontent.com/105986456/216118337-e11710e1-2a81-46bf-8f75-eb3921a15caf.png">
 
-1. Máquina OSM > Ejecutar script 0: ./0_OSM_configuracion.sh
+Pasos para el arranque:
+1. Máquina OSM > Ejecutar script 0
+```
+$ ./0_OSM_configuracion.sh
+```
+
 2. Máquina K8S > Ejecutar script 0: ./0_K8S_configuracion_on.sh
 
 Para apagar ejecutar script 0 en K8S: ./0_OSM_configuracion_off.sh
