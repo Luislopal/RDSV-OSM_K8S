@@ -20,7 +20,6 @@ Autores: Luis López Álvarez´y Álvaro de Rojas Maraver
 ```
 ./0_K8S_configuracion_on.sh
 ```
-```
 3. Máquina OSM: Ejecutar script 1 
 ```
 ./1_OSM_installdescriptors.sh
